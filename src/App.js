@@ -4,7 +4,7 @@ import BarChart from './components/BarChart';
 function App() {
   return (
     <div className="App">
-     <BarChart />
+    <BarChart />
     </div>
   );
 }

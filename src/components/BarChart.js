@@ -1,8 +1,17 @@
-import React from 'react';
+import { Bar } from 'react-chartjs-2';
 
 const BarChart = () => {
   return (
-    <div>BarChart</div>
+    <Bar 
+      data={{
+        labels: ['Red', 'Blue', 'Orange', 'Yellow', 'Purple']
+      }}
+      height={400}
+      width={600}
+      options={{
+          maintainAspectRatio: false,
+      }}
+    />
   )
 }
 

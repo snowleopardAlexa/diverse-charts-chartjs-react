@@ -6,20 +6,20 @@ import PieChart from "./components/PieChart";
 import { UserData } from "./Data";
 
 function App() {
-  const [userData, setUserData] = useState({
+  const [userData] = useState({
     labels: UserData.map((data) => data.year),
     datasets: [
       {
         label: "Users Gained",
         data: UserData.map((data) => data.userGain),
         backgroundColor: [
-          "rgba(75,192,192,1)",
-          "#ecf0f1",
-          "#50AF95",
-          "#f3ba2f",
-          "#2a71d0",
+          "#B983FF",
+          "#94B3FD",
+          "#94DAFF",
+          "#99FEFF",
+          "#FB7AFC",
         ],
-        borderColor: "black",
+        borderColor: "#61045F",
         borderWidth: 2,
       },
     ],
@@ -27,13 +27,14 @@ function App() {
 
   return (
     <div className="app">
+      <h2>Charts</h2>
       <div style={{ width: 700 }}>
         <BarChart chartData={userData} />
       </div>
       <div style={{ width: 700 }}>
         <LineChart chartData={userData} />
       </div>
-      <div style={{ width: 700 }}>
+      <div style={{ width: 500 }}>
         <PieChart chartData={userData} />
       </div>
     </div>
